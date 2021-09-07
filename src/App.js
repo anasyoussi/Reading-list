@@ -1,14 +1,17 @@
 import React from 'react'
 import './App.css';
-import Navbar from './Component/Navbar'
-import BookList from './Component/BookList'
+import Navbar from './Components/Navbar'
+import BookList from './Components/BookList'
+import ThemeContextProvider from './Contexts/ThemeContext';
 
 
 function App() {
   return (
     <div className="App">
-       <Navbar />
-       <BookList />
+        <ThemeContextProvider>
+          <Navbar />
+          <BookList />
+        </ThemeContextProvider>
     </div>
   );
 }
